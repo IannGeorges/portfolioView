@@ -1,0 +1,530 @@
+/*Selects All*/
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+.body {
+  overflow: auto;
+}
+section {
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.plzwork {
+  width: 100%;
+  height: 100vh;
+
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+p {
+  text-align: center;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 0.4em;
+
+  font-family: "Press Start 2P", cursive;
+}
+h3 {
+  text-align: center;
+}
+/*Erases margin located at the top of the page created by the heading tags*/
+#title-page {
+  margin: 0;
+  padding-bottom: 0.25em;
+}
+/* To ensure the html & body tags fills up the screen */
+html,
+body {
+  text-align: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* Creates spacing between name-divs & link-divs 
+hr {
+    background-color: purple;
+  width: 120%;
+  height: 12px;
+  border-top: 1px solid black;
+    display: block;
+    position: relative;
+    margin-bottom: 1em;
+    
+    
+}
+*/
+/* Iann Akoulouze & Mission Statement */
+
+.Name {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  z-index: 1;
+  font-size: 24px;
+}
+/* Set Name & Link Fonts to 8bit & beige color */
+.links a,
+.Name {
+  text-decoration: none !important;
+  color: #f2e6d9 !important;
+  font-family: "Press Start 2P", cursive;
+}
+/* Styles the home page background */
+.Home {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  background-size: cover;
+  z-index: 1;
+}
+.background {
+  width: 100%;
+  height: 105%;
+  background-color: rgba(0, 0, 0, 0.82);
+  background-image: url(background.jpg);
+  background-blend-mode: multiply;
+  background-size: cover;
+  z-index: 1;
+}
+hr {
+}
+
+/* Position of Links and initiation of animation */
+.links {
+  text-align: center;
+  position: relative;
+  margin: 0;
+  margin-bottom: 1em;
+  /*
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); */
+}
+
+/* Does nothing lol */
+.links ul {
+  vertical-align: top;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+/* Sets lists to inline (horizontal) display */
+.links li {
+  text-align: center;
+  display: inline;
+}
+/* Spaces links from each other and removes underline decoration */
+.links a {
+  padding: 0 20px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Underline Animation */
+.cool-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #f2e6d9;
+  transition: width 0.3s;
+}
+
+/* Underline Animation */
+.cool-link:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+/*  Main DIV Container for home page text */
+.text {
+  padding-top: 15em;
+  align-self: center;
+  text-align: center;
+}
+.content {
+  height: 100%;
+}
+.icons {
+  position: relative;
+  height: 20%;
+}
+/* Media accounts icon links*/
+.icons ul {
+  position: relative;
+  height: 20%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.icons li {
+  display: inline;
+}
+.fa-2x:hover {
+  transform: scale(2);
+  opacity: 0.8;
+}
+
+.fa-2x {
+  margin: 0 2%;
+  padding: 0;
+  text-align: center;
+  color: #f2e6d9;
+  transition: transform 0.2s;
+}
+
+.myProjects {
+  align-self: center;
+
+  height: 100vh;
+  width: 100%;
+
+  background: linear-gradient(to top, #200235 5%, #000000 100%);
+}
+.project-title {
+  color: #f2e6d9;
+  margin: 0;
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+}
+
+.Resume {
+  background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #000000 5%, #200235 100%);
+}
+.resume {
+  margin: 0;
+
+  color: #f2e6d9;
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+}
+
+.container {
+  height: 100%;
+  margin: auto;
+  width: 75%;
+  z-index: -1;
+}
+
+.margin {
+  position: relative;
+  height: 15%;
+}
+.casestudy {
+  display: inline-block;
+  list-style: none;
+  margin: 0%;
+  padding: 0;
+  position: relative;
+  height: 77.5%;
+  column-fill: auto;
+  width: 100%;
+}
+
+.img {
+  background-image: url(projects/project1.jpg);
+  background-size: 100% 100%;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#uno {
+  background: red;
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-template-rows: 4fr 0.3fr;
+  grid-gap: 1px;
+  /*  background-image: url(projects/project1.jpg);
+    background-size: 100% 100%; */
+}
+#dos {
+  background: blue;
+  padding: 1rem;
+}
+
+#tres {
+  background: green;
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-template-rows: 4fr 0.3fr;
+  grid-gap: 1px;
+}
+
+#quatro {
+  background: purple;
+  padding: 1rem;
+}
+
+#cinco {
+  background: orange;
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-template-rows: 4fr 0.3fr;
+  grid-gap: 1px;
+}
+
+#sies {
+  background: rgb(64, 33, 121);
+  padding: 1rem;
+}
+
+.titleproj {
+  margin-top: 0.5%;
+  color: white;
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  vertical-align: middle;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  justify-content: center;
+}
+.textgrid {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+  margin: auto;
+}
+.projtext {
+  padding: 0.5em;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.25fr 1fr;
+  grid-gap: 2%;
+  justify-content: center;
+  text-align: center;
+}
+#project-title {
+  color: #f2e6d9;
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  vertical-align: middle;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin: 0;
+  font-size: 3em;
+}
+#center {
+  text-align: center;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.gridtut {
+  padding-top: 3.5vh;
+  padding-bottom: 1%;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 30% auto;
+  grid-template-rows: 0.25fr 1fr 1fr 1fr;
+  align-content: center;
+  vertical-align: middle;
+  text-align: center;
+  grid-gap: 15px;
+}
+
+.a {
+  margin: 0;
+  padding: 0;
+}
+.nes-btn {
+  margin: 0;
+  padding: 0;
+}
+.pdf {
+  padding: 2%;
+  height: 85%;
+}
+
+.aboutme {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, #000000 5%, #200235 100%);
+}
+
+#about-title {
+  padding: 3%;
+  color: #f2e6d9;
+  margin: 0;
+  font-size: 54px;
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  padding-bottom: 10%;
+}
+
+#resume-title {
+  padding-top: 3%;
+  color: #f2e6d9;
+  margin: 0;
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  font-size: 54px;
+}
+
+.outer {
+  background: rgb(130, 10, 228);
+  height: 50%;
+  padding: 1rem;
+  margin: 0;
+}
+
+.inner {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 0.6fr;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.abttext {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  padding: 2%;
+  position: relative;
+  color: white;
+  text-align: center;
+  font-size: 0.85em;
+}
+.abtpic {
+  background-image: url(projects/aboutmepic.gif);
+  background-size: 100% 100%;
+  padding-top: 5%;
+  margin-left: 30%;
+  margin-right: 30%;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.resumegrid {
+  display: grid;
+  height: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 950px) {
+  .text {
+    left: 5%;
+    right: 5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cool-link {
+    margin: 0.5em;
+  }
+
+  .h3 {
+    font-size: 0.25em;
+  }
+  .text {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 8.5em;
+    vertical-align: middle;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .projtext {
+    display: block;
+  }
+  #dos {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  #uno,
+  #tres,
+  #cinco {
+    grid-template-columns: 100%;
+    justify-content: center;
+  }
+  .titleproj {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+  .textgrid {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+  #project-title {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    font-size: 1em;
+    height: 5vh;
+  }
+  .img {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+  .text {
+    justify-content: center;
+    display: flex;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 8.5em;
+    vertical-align: middle;
+    text-align: center;
+    height: 60%;
+  }
+  .Home {
+    padding-top: 4rem;
+    height: 60%;
+  }
+  .Name {
+    font-size: 20px;
+  }
+  .text {
+    padding: 0;
+    margin: 0;
+  }
+  .outer {
+    height: 60vh;
+  }
+  .inner {
+    grid-template-rows: 0.7fr 0.3fr;
+    font-size: 0.7rem;
+  }
+  .abtpic {
+    background-size: 100% 100%;
+  }
+
+  .gridtut {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 30vh;
+    padding: 1em;
+    vertical-align: middle;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+.btn-light:hover {
+  transform: scale(1.25);
+  opacity: 0.9;
+}
+
+.nes-button {
+}
